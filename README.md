@@ -166,7 +166,7 @@ df -h
 ```
 
 ## Useful LVM verification commands:
-
+```bash
 pvs        # Display summary of Physical Volumes
 pvdisplay  # Detailed Physical Volume information
 
@@ -180,7 +180,7 @@ lsblk      # Show block devices and mount points
 
 df -h      # Show disk usage in human-readable format
 df -Th     # Show filesystem type and disk usage
-
+```
 ## Skills Demonstrated
 
 * Linux Storage Administration
