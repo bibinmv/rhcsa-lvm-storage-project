@@ -47,7 +47,7 @@ lsblk
 
 Screenshot:
 
-![Disk Check](screenshots/01-disks.png)
+![Disk Check](screenshots/01-disk.png)
 
 ## Step 2 — Create Physical Volumes
 
