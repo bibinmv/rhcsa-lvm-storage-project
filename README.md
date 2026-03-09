@@ -53,12 +53,15 @@ Screenshot:
 ## Step 2 — Create Physical Volumes
 
 Create physical volumes from the new disks.
-
+```bash 
 pvcreate /dev/nvme0n2
+``` 
 
 Verify PV creation:
-
+disks.
+```bash
 pvs
+```
 
 Screenshot:
 
