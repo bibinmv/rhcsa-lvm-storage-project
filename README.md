@@ -123,7 +123,7 @@ Screenshot:
 
 Add the mount entry to `/etc/fstab`.
 
-/dev/vg_data/lv_data  /data  xfs  defaults 0 0
+/dev/data_vg/data_lv  /data  xfs  defaults 0 0
 
 Test the configuration:
 
