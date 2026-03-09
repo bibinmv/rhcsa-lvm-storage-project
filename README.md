@@ -70,12 +70,14 @@ Screenshot:
 ## Step 3 — Create Volume Group
 
 Create a volume group using the physical volumes.
-
+```bash
 vgcreate data_vg /dev/nvme0n2
+```
 
 Verify:
-
+```bash
 vgs
+```
 
 Screenshot:
 
@@ -84,12 +86,14 @@ Screenshot:
 ## Step 4 — Create Logical Volume
 
 Create a logical volume inside the volume group.
-
+```bash
 lvcreate -L 5G -n data_lv data_vg
+```
 
 Verify:
-
+```bash
 lvs
+```
 
 Screenshot:
 
@@ -98,8 +102,9 @@ Screenshot:
 ## Step 5 — Create Filesystem
 
 Format the logical volume with an XFS filesystem.
-
+```bash
 mkfs.xfs /dev/data_vg/data_lv
+```
 
 Screenshot:
 
@@ -108,16 +113,18 @@ Screenshot:
 ## Step 6 — Mount Filesystem
 
 Create a mount directory.
-
+```bash
 mkdir /data
+```
 
 Mount the logical volume.
-
+```bash 
 mount /dev/data_vg/data_lv /data
-
+```
 Verify:
-
+```bash
 df -h
+```
 
 Screenshot:
 
@@ -126,12 +133,14 @@ Screenshot:
 ## Step 7 — Configure Persistent Mount
 
 Add the mount entry to `/etc/fstab`.
-
+```bash
 /dev/data_vg/data_lv  /data  xfs  defaults 0 0
+```
 
 Test the configuration:
-
+```bash
 mount -a
+```
 
 Screenshot:
 
@@ -142,17 +151,19 @@ Screenshot:
 ## Step 8 — Extend Logical Volume
 
 Increase logical volume size.
-
+```bash
 lvextend -L +2G /dev/data_vg/data_lv
+```
 
 Resize the filesystem.
-
+```bash
 xfs_growfs /data
+```
 
 Verify the new size.
-
+```bash
 df -h
-
+```
 
 ## Useful LVM verification commands:
 
