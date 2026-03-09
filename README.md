@@ -42,8 +42,9 @@ Mount Point (/data)
 ## Step 1 — Verify Available Disks
 
 Check the available disks before creating LVM.
-
+```bash
 lsblk
+``` 
 
 Screenshot:
 
