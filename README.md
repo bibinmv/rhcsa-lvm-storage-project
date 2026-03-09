@@ -117,13 +117,12 @@ df -h
 
 Screenshot:
 
-![Mount](screenshots/06-mount.png)
+![Mount](screenshots/06-temporary-mount.png)
 
 ## Step 7 — Configure Persistent Mount
 
 Add the mount entry to `/etc/fstab`.
 
-vim /etc/fstab
 /dev/vg_data/lv_data /data xfs defaults 0 0
 
 Test the configuration:
